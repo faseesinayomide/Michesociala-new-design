@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    font-family: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+}
+:root{
+--primary: #F0EEEC;
+--secondary:#242424;
+--third:#F7F7F7;
+--low-texts:#9c9c9a;
+--blue:#364FAB;
+--br:0 0 100px 100px;
+--br-btm:100px 100px 0 0;
+}
+body {
+background-color: var(--primary);
+
+}
+
+header{
+  display:flex;
+background-color: var(--primary);
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+      width: 100%;
+    
+}
+.navbar img{
+  width: 80px;
+  height: 80px;
+}
+.links {
+  display: flex;
+  gap: 15px;
+  padding:10px;
+}
+.links a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--secondary);
+    font-size: 18px;
+font-weight: 300;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: var(--primary);
+  border-radius:var(--br);
+  flex-direction: column;
+  gap: 20px;
+    position: relative;
+  z-index: 5; 
+  height: 70vh;
+}
+.hero img{
+  width: 120px;
+  height: 120px;
+  border-radius:90px;
+  box-shadow: 0px 0px 10px var(--secondary);
+}
+.txt{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+padding: 20px 20px;
+text-align: center;
+  letter-spacing: -0.025em;
+    line-height: 1.12;
+
+}
+.txt h1{
+  font-size: 3rem;
+}
+.txt h1 span {
+  color: var(--low-texts);
+}
+.txt h1 em {
+  color: var(--blue);
+  font-style: normal;
+}
+.txt p{
+  max-width: 780px;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--low-texts);
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px
+  ;
+}
+.btns .pill a{
+  color: var(--primary);
+  background-color: var(--secondary);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 30px;
+  text-transform: capitalize;
+}
+.btns .dark a{
+  color: var(--secondary);
+    background-color: var(--third);
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 30px;
+  text-transform: capitalize;
+}
+.btns .pill:hover{
+  transform: translateY(-4px);
+  transition: 0.5s ease-in-out;
+}
+.btns .dark:hover{
+  transform: translateY(-4px);
+  transition: 0.5s ease-in-out;
+}
+
+.sponsors{
+  position: relative;               /* was empty, this is the fix */
+  z-index: 4;                       /* sits underneath the hero */
+  margin-top: -60px;                /* pulls it up behind the hero's curve */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 57px;
+  background-color: var(--third);
+  padding: 10%;  
+  border-radius:var(--br);
+}
+.sponsors h1{
+  color: var(--secondary);
+  white-space: nowrap;
+text-transform: capitalize;
+opacity: 0.82;
+  font-size: 1.9rem ;
+
+}
+.sponsors .kay{
+ font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.sponsors .nort{
+ font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+}
+.sponsors .ig{
+font-weight: 500;
+}
+.sponsors .tt{
+ font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.sponsors .lk{
+font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+}
+.contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 30px;
+  max-width: 1120px;
+  margin: auto;
+  gap: 20px;
+}
+.contain h1{
+  font-size: 2.5rem;
+
+}
+.contain h1 span{
+  color: var(--blue);
+}
+ .divider {
+  position: relative;
+  width: 100%;                      /* the fix */
+  max-width: 780px;
+  height: 1px;
+  flex-shrink: 0;                   /* stops a flex parent from squashing it */
+  background: rgba(0, 0, 0, 0.12);
+  margin: 44px auto 56px;
+}
+
+.sticker {
+  position: absolute;
+  left: 50%;                          /* halfway across the line */
+  top: 50%;                           /* halfway down the 1px line */
+  transform: translate(-50%, -50%) rotate(-8deg);   /* center it exactly, then tilt it */
+  background: #fff;
+  color: #1a1a1a;
+  padding: 8px 18px;
+  border-radius: 999px;               /* fully round pill */
+  font-size: 0.8rem;
+  white-space: nowrap;                /* keeps the label on one line */
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+.containers{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  padding: 20px ;
+}
+.box{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: start;
+padding: 20px 30px;
+gap: 10px
+;
+}
+.box img{
+  width: 30px;
+  height: 30px;
+}
+.box h1{
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+font-family: Georgia,;
+}
+.box p{
+  font-size: 0.9rem;
+  color: var(--low-texts);
+}
+ .dark a{
+  color: var(--secondary);
+    background-color: var(--third);
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  box-shadow: 0 0 5px var(--low-texts);
+}
+.dark:hover{
+  transform: translateY(-4px);
+  transition: 0.5s ease-in-out;
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: var(--br-btm);
+  flex-direction: column;
+  gap: 20px;
+  height: 80vh;
+  background-color: var(--third);
+}
+footer .f1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--s3);
+  gap: 20px;
+}
+footer .f1 img{
+  width: 120px;
+  height: 120px;
+  border-radius: 90px;
+}
+footer .f1 h1{
+  font-size: 3rem;
+  font-weight: 500;
+}
+footer .f1 .f1-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+footer .f1-links a{
+  color: var(--primary);
+  background-color: var(--secondary);
+  padding: 25px;
+  text-decoration: none;
+  border-radius: 250px;
+  text-transform: capitalize;
+}
+.f1-links #dark{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.coutesy{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--low-texts);
+  padding: 20px;
+}
